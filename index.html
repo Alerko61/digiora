@@ -213,18 +213,7 @@ document.querySelectorAll('.nd>.nl').forEach(b=>{b.addEventListener('click',e=>{
 // Phone: digits only
 document.getElementById('fPhone')?.addEventListener('input',function(){this.value=this.value.replace(/[^0-9\s]/g,'')});
 
-// ============================================
-// CONTACT FORM — Web3Forms
-// ============================================
-// INSTRUCTIONS :
-// 1. Va sur https://web3forms.com
-// 2. Entre ton email : digiorapro@gmail.com
-// 3. Tu reçois une clé (Access Key) par mail
-// 4. Remplace YOUR_ACCESS_KEY_HERE ci-dessous par ta clé
-// 5. C'est tout — les mails arrivent direct, zéro activation
-// ============================================
-
-const W3F_KEY = "YOUR_ACCESS_KEY_HERE"; // <-- METS TA CLÉ ICI
+const W3F_KEY = "2a8a1ac2-7792-49aa-937b-209b88c37f87"; 
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
