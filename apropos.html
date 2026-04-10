@@ -65,7 +65,7 @@ document.querySelectorAll('.nd>.nl').forEach(function(b){b.addEventListener('cli
 var ph=document.getElementById('fp');if(ph)ph.addEventListener('input',function(){this.value=this.value.replace(/[^0-9 ]/g,'')});
 
 // Contact form - Web3Forms
-document.getElementById('cf').addEventListener('submit',function(e){
+var cfForm=document.getElementById('cf');if(cfForm)cfForm.addEventListener('submit',function(e){
   e.preventDefault();
   var btn=document.getElementById('sb'),msg=document.getElementById('fm');
   var nm=document.getElementById('fn').value.trim();
