@@ -116,7 +116,7 @@ document.getElementById('cf').addEventListener('submit',function(e){
   msg.className='';msg.style.display='none';
   fetch('https://api.web3forms.com/submit',{
     method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({access_key:'2a8a1ac2-7792-49aa-937b-209b88c37f87',from_name:'Digiora',replyto:em,subject:'Digiora — Devis de '+nm,Nom:nm,Email:em,'T\u00e9l\u00e9phone':pp||'Non renseign\u00e9','Message du client':ms,'Envoy\u00e9 depuis':'Site web Digiora'})
+    body:JSON.stringify({access_key:'2a8a1ac2-7792-49aa-937b-209b88c37f87',from_name:'Digiora',replyto:em,subject:'Digiora \u2014 Nouvelle demande de devis de '+nm,message:'Bonjour,\n\nNouvelle demande de devis re\u00e7ue sur le site Digiora.\n\n\ud83d\udc64 Nom : '+nm+'\n\ud83d\udce7 Email : '+em+'\n\ud83d\udcf1 T\u00e9l\u00e9phone : '+(pp||'Non renseign\u00e9')+'\n\n\ud83d\udcdd Message :\n'+ms+'\n\n---\nEnvoy\u00e9 depuis le site web Digiora'})
   }).then(function(r){return r.json()}).then(function(d){
     if(d.success){msg.className='ok';msg.textContent='Message envoye ! On vous recontacte sous 24h.';msg.style.display='block';document.getElementById('cf').reset()}
     else{throw new Error()}
